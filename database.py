@@ -33,7 +33,7 @@ class Comment(Base):
     text = Column(String(280), nullable=False)
     sender_id = Column(Integer, ForeignKey('users.user_id'), nullable=False)
     receiver_id = Column(Integer, nullable=False)
-    type = Column(Integer, nullable=False)
+    type = Column(String(50), nullable=False)
     type_id = Column(Integer, nullable=False)
     mood_id = Column(Integer, ForeignKey('moods.mood_id'), nullable=False)
     creation_date = Column(Integer, nullable=False)
